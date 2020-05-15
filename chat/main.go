@@ -51,9 +51,9 @@ func main() {
 
 	gomniauth.SetSecurityKey("djeufhyef89y7")
 	gomniauth.WithProviders(
-		facebook.New("909855362146-4686vdakauk3qkvu6g2hhg58ej9lg9fu.apps.googleusercontent.com", "xeFaYLdrqePVQPKqy8TTTJ97", "http://localhost:8080/auth/callback/facebook"),
-		github.New("909855362146-4686vdakauk3qkvu6g2hhg58ej9lg9fu.apps.googleusercontent.com", "xeFaYLdrqePVQPKqy8TTTJ97", "http://localhost:8080/auth/callback/github"),
-		google.New("909855362146-4686vdakauk3qkvu6g2hhg58ej9lg9fu.apps.googleusercontent.com", "xeFaYLdrqePVQPKqy8TTTJ97", "http://localhost:8080/auth/callback/google"),
+		facebook.New("クライアントID", "クライアント シークレット", "http://localhost:8080/auth/callback/facebook"),
+		github.New("クライアントID", "クライアント シークレット", "http://localhost:8080/auth/callback/github"),
+		google.New("クライアントID", "クライアント シークレット", "http://localhost:8080/auth/callback/google"),
 	)
 
 	http.Handle("/chat", MustAuth(&templateHandler{filename: "chat.html"}))
